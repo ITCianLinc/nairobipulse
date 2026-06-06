@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nairobi Pulse — News, Lifestyle & More</title>
+  <meta name="description"
+    content="Nairobi Pulse covers the latest news, lifestyle, tech, health, and entertainment stories from Kenya and around the world." />
+  <meta name="keywords" content="Kenya news, Nairobi lifestyle, East Africa news, tech Kenya, entertainment Kenya" />
+  <meta name="author" content="Nairobi Pulse" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nairobi Pulse — News, Lifestyle & More" />
+  <meta property="og:description" content="Your daily source for Kenyan news, lifestyle, and entertainment." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- AdSense placeholder (replace with real code after approval) -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- TOP AD BANNER (AdSense slot) -->
+  <div class="ad-banner top-ad">
+    <span>Advertisement</span>
+    <!-- AdSense leaderboard ad goes here -->
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">◈</span>
+        <div>
+          <h1>Nairobi Pulse</h1>
+          <p class="tagline">News · Lifestyle · Culture</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#lifestyle">Lifestyle</a>
+        <a href="#tech">Tech</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="#health">Health</a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#lifestyle">Lifestyle</a>
+      <a href="#tech">Tech</a>
+      <a href="#entertainment">Entertainment</a>
+      <a href="#health">Health</a>
+    </div>
+  </header>
+
+  <!-- BREAKING NEWS TICKER -->
+  <div class="ticker-wrap">
+    <span class="ticker-label">BREAKING</span>
+    <div class="ticker-content">
+      <span id="live-ticker-text">Kenya's economy grows 5.8% in Q1 2026 &nbsp;&nbsp;•&nbsp;&nbsp; Nairobi ranked top
+        tech hub in East Africa
+        &nbsp;&nbsp;•&nbsp;&nbsp; New health guidelines issued by Ministry of Health &nbsp;&nbsp;•&nbsp;&nbsp; Local
+        startup raises KES 200M in Series A funding &nbsp;&nbsp;•&nbsp;&nbsp; Safaricom launches new data bundle
+        packages &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <article class="hero-main">
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1611348586804-61bf6c080437?w=900&q=80"
+            alt="Nairobi city skyline" />
+          <span class="category-badge">Featured</span>
+        </div>
+        <div class="hero-content">
+          <span class="meta">June 3, 2026 &nbsp;·&nbsp; By Editorial Team</span>
+          <h2>Nairobi's Digital Economy Surges as Youth-Led Startups Redefine the Future of Work</h2>
+          <p>From Silicon Savannah to global recognition, Kenya's capital is witnessing an unprecedented wave of
+            innovation. Young entrepreneurs are building solutions that are not only reshaping local industries but also
+            attracting international investment at record rates.</p>
+          <a href="#" class="read-more">Read Full Story →</a>
+        </div>
+      </article>
+
+      <div class="hero-side">
+        <article class="side-card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80" alt="Food" />
+          <div>
+            <span class="category-badge lifestyle">Lifestyle</span>
+            <h3>The Rise of Kenyan Street Food Culture in Urban Centers</h3>
+            <span class="meta">May 31, 2026</span>
+          </div>
+        </article>
+        <article class="side-card">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="Tech" />
+          <div>
+            <span class="category-badge tech">Tech</span>
+            <h3>5G Rollout Accelerates Across Major Kenyan Cities</h3>
+            <span class="meta">May 29, 2026</span>
+          </div>
+        </article>
+        <article class="side-card">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="Health" />
+          <div>
+            <span class="category-badge health">Health</span>
+            <h3>Experts Recommend These Daily Habits for Better Mental Wellness</h3>
+            <span class="meta">May 27, 2026</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LIVE PULSE NEWS & TRENDS CENTER -->
+    <section class="live-pulse-container" id="live-pulse-container">
+      <div class="live-pulse-header">
+        <div class="live-pulse-title-wrap">
+          <h2 class="live-pulse-title">Live Pulse</h2>
+          <span class="live-badge">
+            <span class="live-dot"></span>
+            <span id="live-status-label">Live Updates</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="pulse-tabs">
+        <button class="pulse-tab-btn active" id="tab-news-btn" onclick="switchPulseTab('news')">Live News Feed</button>
+        <button class="pulse-tab-btn" id="tab-trends-btn" onclick="switchPulseTab('trends')">Nairobi Trends</button>
+      </div>
+
+      <!-- Tab 1 Panel: News Feed -->
+      <div class="pulse-panel active" id="panel-news">
+        <div class="pulse-controls">
+          <!-- Search Bar -->
+          <div class="pulse-search-wrap">
+            <span class="pulse-search-icon">🔍</span>
+            <input type="text" class="pulse-search-input" id="pulse-search" placeholder="Search live headlines..."
+              oninput="filterLiveNews()" />
+          </div>
+          <!-- Category Pills -->
+          <div class="pulse-categories" id="pulse-categories">
+            <!-- Dynamically populated, with "All" active by default -->
+          </div>
+        </div>
+
+        <!-- News Cards Grid -->
+        <div class="pulse-news-grid" id="pulse-news-grid">
+          <!-- Loading Skeletons by default -->
+          <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-body">
+              <div class="skeleton-text short"></div>
+              <div class="skeleton-text long"></div>
+              <div class="skeleton-text medium"></div>
+            </div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-body">
+              <div class="skeleton-text short"></div>
+              <div class="skeleton-text long"></div>
+              <div class="skeleton-text medium"></div>
+            </div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-body">
+              <div class="skeleton-text short"></div>
+              <div class="skeleton-text long"></div>
+              <div class="skeleton-text medium"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2 Panel: Trends -->
+      <div class="pulse-panel" id="panel-trends">
+        <div class="trends-container" id="pulse-trends-list">
+          <!-- Dynamically populated trends -->
+        </div>
+      </div>
+    </section>
+
+    <!-- IN-CONTENT AD (AdSense slot) -->
+    <div class="ad-inline">
+      <span>Advertisement</span>
+      <!-- AdSense in-article ad goes here -->
+    </div>
+
+    <!-- LATEST STORIES GRID -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Latest Stories</h2>
+        <a href="#" class="see-all">See All →</a>
+      </div>
+      <div class="grid-4">
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80" alt="Entertainment" />
+            <span class="category-badge ent">Entertainment</span>
+          </div>
+          <div class="card-body">
+            <h3>Gengetone Music Hits Global Streaming Charts for the First Time</h3>
+            <p>Kenyan artists are breaking boundaries as the homegrown genre finds massive traction on platforms
+              worldwide.</p>
+            <div class="card-footer">
+              <span class="meta">June 1, 2026</span>
+              <a href="#">Read →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&q=80" alt="Finance" />
+            <span class="category-badge finance">Finance</span>
+          </div>
+          <div class="card-body">
+            <h3>How to Make Your M-Pesa Work Harder: Smart Saving Tips</h3>
+            <p>Financial experts share practical strategies to help everyday Kenyans grow their savings using mobile
+              money tools.</p>
+            <div class="card-footer">
+              <span class="meta">May 30, 2026</span>
+              <a href="#">Read →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=500&q=80" alt="Lifestyle" />
+            <span class="category-badge lifestyle">Lifestyle</span>
+          </div>
+          <div class="card-body">
+            <h3>Minimalist Living: Why More Nairobians Are Decluttering Their Lives</h3>
+            <p>A growing movement of urban Kenyans is embracing simplicity, intentional living, and mindful consumption.
+            </p>
+            <div class="card-footer">
+              <span class="meta">May 28, 2026</span>
+              <a href="#">Read →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500&q=80" alt="Tech" />
+            <span class="category-badge tech">Tech</span>
+          </div>
+          <div class="card-body">
+            <h3>AI Tools That Are Saving Kenyan SMEs Time and Money</h3>
+            <p>From customer service bots to automated bookkeeping — here are the tools changing the game for small
+              businesses.</p>
+            <div class="card-footer">
+              <span class="meta">May 26, 2026</span>
+              <a href="#">Read →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TWO-COLUMN: ARTICLES + SIDEBAR -->
+    <div class="two-col">
+
+      <section class="main-col">
+        <div class="section-header">
+          <h2 class="section-title">Trending Now</h2>
+        </div>
+
+        <article class="list-card">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&q=80" alt="Education" />
+          <div>
+            <span class="category-badge tech">Tech</span>
+            <h3>Free Online Courses Every Kenyan Youth Should Take in 2026</h3>
+            <p>We round up the best free platforms offering certifications that actually matter to employers in Kenya
+              today.</p>
+            <div class="card-footer"><span class="meta">June 2, 2026</span><a href="#">Read →</a></div>
+          </div>
+        </article>
+
+        <article class="list-card">
+          <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&q=80" alt="Music" />
+          <div>
+            <span class="category-badge ent">Entertainment</span>
+            <h3>Top 10 Kenyan Songs You Need on Your Playlist This Month</h3>
+            <p>From Afrobeats to gospel, our editors curated the hottest tracks making waves across the country right
+              now.</p>
+            <div class="card-footer"><span class="meta">June 1, 2026</span><a href="#">Read →</a></div>
+          </div>
+        </article>
+
+        <article class="list-card">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&q=80" alt="Travel" />
+          <div>
+            <span class="category-badge lifestyle">Lifestyle</span>
+            <h3>Hidden Gems: 7 Affordable Weekend Getaways Near Nairobi</h3>
+            <p>You don't need to break the bank to enjoy a great escape. These spots are beautiful, fun, and within easy
+              reach.</p>
+            <div class="card-footer"><span class="meta">May 31, 2026</span><a href="#">Read →</a></div>
+          </div>
+        </article>
+
+        <article class="list-card">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=300&q=80" alt="Food" />
+          <div>
+            <span class="category-badge health">Health</span>
+            <h3>The Kenyan Diet: Nutritionists Reveal What We're Getting Right and Wrong</h3>
+            <p>Local foods like ugali, sukuma wiki, and fermented milk are under the microscope — and the results might
+              surprise you.</p>
+            <div class="card-footer"><span class="meta">May 29, 2026</span><a href="#">Read →</a></div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <!-- Sidebar Ad -->
+        <div class="ad-sidebar">
+          <span>Advertisement</span>
+          <!-- AdSense sidebar ad goes here -->
+        </div>
+
+        <div class="widget">
+          <h3 class="widget-title">Popular Posts</h3>
+          <ol class="popular-list">
+            <li><a href="#">How Kenya's Gen Z is Changing Politics Forever</a></li>
+            <li><a href="#">10 Signs You're Ready to Start a Business in Kenya</a></li>
+            <li><a href="#">Why Nairobi Traffic is Getting Worse — and What's Being Done</a></li>
+            <li><a href="#">The Best Hospitals in Kenya by County</a></li>
+            <li><a href="#">Kenyan Fashion Designers Taking Africa to the World Stage</a></li>
+          </ol>
+        </div>
+
+        <div class="widget">
+          <h3 class="widget-title">Topics</h3>
+          <div class="tags">
+            <a href="#" class="tag">Nairobi</a>
+            <a href="#" class="tag">Kenya News</a>
+            <a href="#" class="tag">Tech</a>
+            <a href="#" class="tag">Health</a>
+            <a href="#" class="tag">Entertainment</a>
+            <a href="#" class="tag">Finance</a>
+            <a href="#" class="tag">Lifestyle</a>
+            <a href="#" class="tag">Politics</a>
+            <a href="#" class="tag">Education</a>
+            <a href="#" class="tag">Travel</a>
+            <a href="#" class="tag">Food</a>
+          </div>
+        </div>
+
+        <div class="widget newsletter-widget">
+          <h3 class="widget-title">Newsletter</h3>
+          <p>Get top stories delivered to your inbox daily.</p>
+          <div class="nl-form">
+            <input type="email" placeholder="your@email.com" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+    <!-- BOTTOM AD -->
+    <div class="ad-inline">
+      <span>Advertisement</span>
+      <!-- AdSense ad goes here -->
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">◈</span>
+        <h3>Nairobi Pulse</h3>
+        <p>Your daily source for Kenyan news, lifestyle, and culture.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Categories</h4>
+        <a href="#news">News</a>
+        <a href="#lifestyle">Lifestyle</a>
+        <a href="#tech">Tech</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="#health">Health</a>
+        <a href="#finance">Finance</a>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nairobi Pulse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ARTICLE DETAILS DRAWER -->
+  <div class="article-drawer-overlay" id="articleDrawerOverlay" onclick="closeArticleDrawer()"></div>
+  <div class="article-drawer" id="articleDrawer">
+    <div class="drawer-header">
+      <h3>Article Preview</h3>
+      <button class="drawer-close-btn" onclick="closeArticleDrawer()">×</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <!-- Dynamically populated content -->
+    </div>
+    <div class="drawer-action-wrap">
+      <a href="#" target="_blank" class="drawer-link-btn" id="drawerOriginalLink">Open Original Article</a>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

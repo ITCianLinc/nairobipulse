@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient for the Diamond -->
+    <linearGradient id="pulse-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4B45" />
+      <stop offset="100%" stop-color="#D9211B" />
+    </linearGradient>
+    
+    <!-- Drop Shadow for Premium Depth -->
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#111111" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- The Diamond Shape (Rotated Square) representing the brand's logo symbol -->
+  <rect x="22" y="22" width="56" height="56" rx="8" transform="rotate(45 50 50)" fill="url(#pulse-grad)" filter="url(#shadow)" />
+
+  <!-- The Pulse Wave Line -->
+  <path d="M 26 50 L 39 50 L 44 26 L 50 74 L 56 38 L 61 50 L 74 50" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="6" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+</svg>
