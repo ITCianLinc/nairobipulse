@@ -182,7 +182,7 @@ nav a:hover, nav a.active {
 .ticker-content span {
   display: inline-block;
   white-space: nowrap;
-  animation: ticker 10s linear infinite;
+  animation: ticker 60s linear infinite;
   padding-left: 20px;
 }
 @keyframes ticker {
